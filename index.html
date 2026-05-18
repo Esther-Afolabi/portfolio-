@@ -1,376 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <meta name="color-scheme" content="light" />
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="theme-color" content="#0d0b1a" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Esther Afolabi — B2B Content Writer</title>
+  <title>Esther Afolabi - B2B Content Writer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,700;1,900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --lavender: #6c5ce7;
-      --lavender-light: #a29bfe;
-      --lavender-pale: #e8e4ff;
-      --lavender-deep: #4a3cc7;
+      --lav: #8b7cf8;
+      --lav-light: #b8b0ff;
+      --lav-pale: #e8e4ff;
+      --lav-deep: #5a4de0;
       --ink: #0d0b1a;
       --ink-mid: #2d2b40;
       --ink-light: #6b6880;
       --white: #ffffff;
-      --off-white: #f0eeff;
-      --rule: #c9c4f0;
-      --serif: 'Playfair Display', Georgia, serif;
-      --sans: 'Mulish', system-ui, sans-serif;
+      --off: #f4f2ff;
+      --rule: #dddaf5;
+      --serif: 'Fraunces', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
     }
     html { scroll-behavior: smooth; color-scheme: light; }
-    body { font-family: var(--sans); background: #ffffff; color: #0d0b1a; font-size: 16px; line-height: 1.7; overflow-x: hidden; font-weight: 400; -webkit-text-size-adjust: 100%; }
-    @media (prefers-color-scheme: dark) { html, body { background: #ffffff !important; color: #0d0b1a !important; } }
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.1rem 6vw; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--rule); }
-    .nav-brand { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; color: var(--ink); text-decoration: none; }
-    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-    .nav-links a { font-size: 0.78rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mid); text-decoration: none; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--lavender); }
-    .hero { min-height: 100vh; padding-top: 72px; display: grid; grid-template-columns: 55% 45%; }
-    .hero-left { padding: 7rem 5vw 6rem 8vw; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid var(--rule); position: relative; }
-    .hero-left::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: linear-gradient(to bottom, transparent, var(--lavender), transparent); }
-    .eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--lavender); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
-    .eyebrow::before { content: ''; display: block; width: 2rem; height: 1px; background: var(--lavender); }
-    .hero-headline { font-family: var(--serif); font-size: clamp(2.8rem, 4.5vw, 4.2rem); font-weight: 700; line-height: 1.1; color: var(--ink); margin-bottom: 2rem; }
-    .hero-headline em { font-style: italic; color: var(--lavender); }
-    .hero-body { font-size: 1rem; color: var(--ink-mid); line-height: 1.8; max-width: 440px; margin-bottom: 2.5rem; font-weight: 400; }
-    .hero-cta { display: inline-flex; align-items: center; gap: 0.75rem; background: var(--lavender); color: #ffffff; padding: 0.9rem 2rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: background 0.25s, transform 0.2s; width: fit-content; }
-    .hero-cta:hover { background: var(--lavender-deep); transform: translateY(-2px); }
-    .hero-cta::after { content: ' →'; }
-    .hero-right { background: var(--off-white); padding: 5rem 4vw 5rem 4vw; display: flex; flex-direction: column; justify-content: center; gap: 2rem; }
-    .hero-photo { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; object-position: top center; border: 3px solid var(--lavender-pale); display: block; }
-    .hero-bio { font-size: 0.95rem; color: var(--ink-mid); line-height: 1.85; font-weight: 400; }
-    .hero-bio strong { color: var(--ink); font-weight: 600; }
-    .hero-bio em { font-style: italic; color: var(--lavender-deep); }
-    .creds-row { display: flex; flex-direction: column; gap: 0.6rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
-    .cred-pill { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.74rem; color: var(--ink-mid); font-weight: 500; }
-    .cred-pill::before { content: ''; width: 5px; height: 5px; background: var(--lavender); border-radius: 50%; flex-shrink: 0; }
-    section { padding: 5.5rem 8vw; border-top: 1px solid var(--rule); background: #ffffff; }
-    .section-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--lavender); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem; }
-    .section-label::before { content: ''; display: block; width: 1.5rem; height: 1px; background: var(--lavender); }
-    .section-title { font-family: var(--serif); font-size: clamp(1.9rem, 3vw, 2.8rem); font-weight: 700; line-height: 1.18; color: var(--ink); margin-bottom: 1rem; max-width: 640px; }
-    .section-intro { font-size: 0.95rem; color: var(--ink-mid); line-height: 1.8; max-width: 560px; margin-bottom: 3.5rem; font-weight: 400; }
-    .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); border: 1px solid var(--rule); }
-    .service-card { padding: 2.5rem 2rem; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); transition: background 0.2s; position: relative; overflow: hidden; }
-    .service-card::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--lavender); transition: width 0.35s; }
-    .service-card:hover::after { width: 100%; }
-    .service-card:hover { background: var(--off-white); }
-    .service-card:nth-child(2n) { border-right: none; }
-    .service-card:nth-child(3), .service-card:nth-child(4) { border-bottom: none; }
-    .service-num { font-family: var(--serif); font-size: 3rem; color: var(--lavender-light); line-height: 1; margin-bottom: 1.2rem; font-weight: 700; display: block; }
-    .service-name { font-family: var(--serif); font-size: 1.25rem; font-weight: 700; color: var(--ink); margin-bottom: 0.75rem; }
-    .service-desc { font-size: 0.87rem; color: var(--ink-mid); line-height: 1.8; font-weight: 400; }
-    .work-section { background: var(--off-white) !important; }
-    .work-grid { display: flex; flex-direction: column; border: 1px solid var(--rule); background: #ffffff; }
-    .work-item { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: start; padding: 2rem 2.5rem; border-bottom: 1px solid var(--rule); text-decoration: none; color: inherit; transition: background 0.18s; }
+    body { font-family: var(--sans); background: #ffffff; color: var(--ink); font-size: 16px; line-height: 1.7; overflow-x: hidden; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1rem 6vw; background: rgba(13,11,26,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(139,124,248,0.2); }
+    .nav-brand { font-family: var(--serif); font-size: 1.1rem; font-weight: 700; color: #ffffff; text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--lav-light); }
+    .hero { min-height: 100vh; padding-top: 68px; background: var(--ink); position: relative; overflow: hidden; display: grid; grid-template-columns: 55% 45%; }
+    .hero::before { content: ''; position: absolute; top: -200px; right: -100px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(139,124,248,0.15) 0%, transparent 65%); pointer-events: none; }
+    .hero::after { content: ''; position: absolute; bottom: -100px; left: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(139,124,248,0.08) 0%, transparent 65%); pointer-events: none; }
+    .hero-left { padding: 6rem 4vw 5rem 8vw; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid rgba(139,124,248,0.2); position: relative; z-index: 1; }
+    .eyebrow { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--lav-light); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+    .eyebrow::before { content: ''; display: block; width: 2rem; height: 1px; background: var(--lav-light); }
+    h1 { font-family: var(--serif); font-size: clamp(2.8rem, 4.5vw, 4.5rem); font-weight: 900; line-height: 1.05; color: #ffffff; margin-bottom: 2rem; }
+    h1 em { font-style: italic; color: var(--lav-light); }
+    .hero-body { font-size: 1rem; color: rgba(255,255,255,0.65); line-height: 1.8; max-width: 420px; margin-bottom: 2.5rem; }
+    .hero-body strong { color: rgba(255,255,255,0.9); font-weight: 600; }
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--lav); color: #ffffff; padding: 0.9rem 2rem; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: background 0.2s, transform 0.2s; width: fit-content; }
+    .btn:hover { background: var(--lav-deep); transform: translateY(-2px); }
+    .hero-right { padding: 5rem 4vw; display: flex; flex-direction: column; justify-content: center; gap: 2rem; position: relative; z-index: 1; }
+    .hero-photo { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; object-position: top center; border: 2px solid rgba(139,124,248,0.4); display: block; }
+    .hero-bio { font-size: 0.93rem; color: rgba(255,255,255,0.65); line-height: 1.85; }
+    .hero-bio strong { color: #ffffff; font-weight: 600; }
+    .hero-bio em { font-style: italic; color: var(--lav-light); }
+    .hero-bio p + p { margin-top: 1rem; }
+    .creds { display: flex; flex-direction: column; gap: 0.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(139,124,248,0.2); }
+    .cred { display: flex; align-items: center; gap: 0.5rem; font-size: 0.73rem; color: rgba(255,255,255,0.45); font-weight: 500; }
+    .cred::before { content: ''; width: 4px; height: 4px; background: var(--lav); border-radius: 50%; flex-shrink: 0; }
+    section { padding: 5rem 8vw; border-top: 1px solid var(--rule); background: #ffffff; }
+    section.alt { background: var(--off); }
+    section.dark { background: var(--ink); border-top: 1px solid rgba(139,124,248,0.15); }
+    .label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--lav); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem; }
+    .label::before { content: ''; display: block; width: 1.5rem; height: 1px; background: var(--lav); }
+    .dark .label { color: var(--lav-light); }
+    .dark .label::before { background: var(--lav-light); }
+    h2 { font-family: var(--serif); font-size: clamp(1.9rem, 2.8vw, 2.8rem); font-weight: 900; line-height: 1.15; color: var(--ink); margin-bottom: 1rem; max-width: 620px; }
+    .dark h2 { color: #ffffff; }
+    .intro { font-size: 0.93rem; color: var(--ink-mid); line-height: 1.8; max-width: 540px; margin-bottom: 3rem; }
+    .dark .intro { color: rgba(255,255,255,0.5); }
+    .services { display: grid; grid-template-columns: repeat(2, 1fr); border: 1px solid var(--rule); }
+    .svc { padding: 2.5rem 2rem; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); position: relative; overflow: hidden; transition: background 0.2s; }
+    .svc::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--lav); transition: width 0.3s; }
+    .svc:hover::after { width: 100%; }
+    .svc:hover { background: var(--off); }
+    .svc:nth-child(2n) { border-right: none; }
+    .svc:nth-child(3), .svc:nth-child(4) { border-bottom: none; }
+    .svc-num { font-family: var(--serif); font-size: 2.8rem; color: var(--lav-pale); line-height: 1; margin-bottom: 1rem; display: block; font-weight: 900; }
+    .svc-name { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; color: var(--ink); margin-bottom: 0.65rem; }
+    .svc-desc { font-size: 0.85rem; color: var(--ink-mid); line-height: 1.8; margin-bottom: 1.25rem; }
+    .svc-metric { display: inline-flex; align-items: baseline; gap: 0.4rem; background: var(--lav-pale); border: 1px solid #c4beff; padding: 0.35rem 0.75rem; }
+    .svc-metric-num { font-family: var(--serif); font-size: 1.4rem; font-weight: 900; color: var(--lav-deep); line-height: 1; }
+    .svc-metric-label { font-size: 0.72rem; font-weight: 600; color: var(--lav-deep); letter-spacing: 0.04em; }
+    .work-list { display: flex; flex-direction: column; border: 1px solid var(--rule); background: #ffffff; }
+    .work-item { display: grid; grid-template-columns: 1fr auto; gap: 1.5rem; align-items: start; padding: 1.75rem 2rem; border-bottom: 1px solid var(--rule); text-decoration: none; color: inherit; transition: background 0.18s; }
     .work-item:last-child { border-bottom: none; }
-    .work-item:hover { background: var(--lavender-pale); }
-    .work-item:hover .work-arrow { transform: translate(4px, -4px); color: var(--lavender); }
-    .work-meta { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
-    .work-pub { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lavender); }
-    .work-badge { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; background: var(--lavender-pale); color: var(--lavender-deep); border: 1px solid var(--lavender-light); padding: 0.18rem 0.55rem; }
-    .work-badge.ranking { background: #edf7ed; color: #1e5e1e; border-color: #8ecb8e; }
-    .work-title { font-family: var(--serif); font-size: 1.15rem; font-weight: 700; color: var(--ink); margin-bottom: 0.5rem; line-height: 1.35; }
-    .work-desc { font-size: 0.85rem; color: var(--ink-mid); line-height: 1.75; max-width: 600px; font-weight: 400; }
-    .work-arrow { font-size: 1.1rem; color: var(--ink-light); transition: transform 0.2s, color 0.2s; margin-top: 0.3rem; flex-shrink: 0; }
-    .approach-section { background: var(--ink) !important; }
-    .approach-section .section-label { color: var(--lavender-light); }
-    .approach-section .section-label::before { background: var(--lavender-light); }
-    .approach-section .section-title { color: #ffffff; }
-    .approach-section .section-intro { color: #9896b8; }
-    .approach-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #2a2840; }
-    .approach-step { background: var(--ink); padding: 2.5rem; transition: background 0.2s; position: relative; }
-    .approach-step:hover { background: #201e35; }
-    .approach-step::before { content: ''; position: absolute; top: 0; left: 0; width: 2px; height: 0; background: var(--lavender); transition: height 0.35s; }
-    .approach-step:hover::before { height: 100%; }
-    .step-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--lavender); margin-bottom: 1rem; display: block; }
-    .step-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; color: #ffffff; margin-bottom: 0.75rem; line-height: 1.3; }
-    .step-desc { font-size: 0.87rem; color: #9896b8; line-height: 1.8; font-weight: 400; }
-    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-    .testimonial-card { background: var(--off-white); border: 1px solid var(--rule); padding: 2.5rem; position: relative; transition: border-color 0.2s; }
-    .testimonial-card:hover { border-color: var(--lavender-light); }
-    .t-mark { font-family: var(--serif); font-size: 5rem; color: var(--lavender-light); line-height: 0.8; margin-bottom: 1.2rem; display: block; }
-    .t-text { font-size: 0.92rem; color: var(--ink); line-height: 1.85; font-style: italic; margin-bottom: 1.5rem; font-family: var(--serif); font-weight: 400; }
-    .t-rule { width: 2rem; height: 1px; background: var(--lavender); margin-bottom: 1rem; }
-    .t-name { font-size: 0.85rem; font-weight: 600; color: var(--ink); }
-    .t-role { font-size: 0.78rem; color: var(--ink-light); margin-top: 0.2rem; }
-    .faq-section { background: var(--off-white) !important; }
-    .faq-list { display: flex; flex-direction: column; border: 1px solid var(--rule); max-width: 720px; }
+    .work-item:hover { background: var(--lav-pale); }
+    .work-item:hover .arr { transform: translate(4px, -4px); color: var(--lav); }
+    .work-meta { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem; flex-wrap: wrap; }
+    .pub { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lav); }
+    .badge { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; background: var(--lav-pale); color: var(--lav-deep); border: 1px solid #c4beff; padding: 0.15rem 0.5rem; }
+    .badge.green { background: #edf7ed; color: #1e5e1e; border-color: #8ecb8e; }
+    .work-title { font-family: var(--serif); font-size: 1.1rem; font-weight: 700; color: var(--ink); margin-bottom: 0.4rem; line-height: 1.3; }
+    .work-desc { font-size: 0.83rem; color: var(--ink-mid); line-height: 1.75; max-width: 580px; }
+    .arr { font-size: 1rem; color: var(--ink-light); transition: transform 0.2s, color 0.2s; margin-top: 0.2rem; flex-shrink: 0; }
+    .approach-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(139,124,248,0.15); }
+    .step { background: var(--ink); padding: 2.25rem; transition: background 0.2s; position: relative; }
+    .step:hover { background: #13102a; }
+    .step::before { content: ''; position: absolute; top: 0; left: 0; width: 2px; height: 0; background: var(--lav); transition: height 0.3s; }
+    .step:hover::before { height: 100%; }
+    .step-num { font-size: 0.66rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--lav-light); margin-bottom: 0.75rem; display: block; }
+    .step-title { font-family: var(--serif); font-size: 1.15rem; font-weight: 700; color: #ffffff; margin-bottom: 0.65rem; line-height: 1.3; }
+    .step-desc { font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.8; }
+    .t-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .t-card { background: #ffffff; border: 1px solid var(--rule); padding: 2rem; transition: border-color 0.2s, transform 0.2s; }
+    .t-card:hover { border-color: var(--lav); transform: translateY(-3px); }
+    .t-mark { font-family: var(--serif); font-size: 4rem; color: var(--lav-pale); line-height: 0.8; margin-bottom: 1rem; display: block; }
+    .t-text { font-size: 0.9rem; color: var(--ink); line-height: 1.85; font-style: italic; margin-bottom: 1.25rem; font-family: var(--serif); }
+    .t-rule { width: 2rem; height: 1px; background: var(--lav); margin-bottom: 0.75rem; }
+    .t-name { font-size: 0.83rem; font-weight: 600; color: var(--ink); }
+    .t-role { font-size: 0.75rem; color: var(--ink-light); margin-top: 0.15rem; }
+    .faq-list { display: flex; flex-direction: column; border: 1px solid var(--rule); max-width: 700px; }
     .faq-item { border-bottom: 1px solid var(--rule); background: #ffffff; }
     .faq-item:last-child { border-bottom: none; }
-    .faq-q { width: 100%; text-align: left; background: none; border: none; padding: 1.5rem 2rem; font-family: var(--sans); font-size: 0.92rem; font-weight: 600; color: var(--ink); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: color 0.2s; }
-    .faq-q:hover { color: var(--lavender); }
-    .faq-q .faq-icon { font-size: 1.1rem; color: var(--lavender); flex-shrink: 0; transition: transform 0.25s; }
+    .faq-q { width: 100%; text-align: left; background: none; border: none; padding: 1.35rem 1.75rem; font-family: var(--sans); font-size: 0.9rem; font-weight: 600; color: var(--ink); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: color 0.2s; }
+    .faq-q:hover { color: var(--lav); }
+    .faq-icon { font-size: 1rem; color: var(--lav); flex-shrink: 0; transition: transform 0.25s; }
     .faq-item.open .faq-icon { transform: rotate(45deg); }
-    .faq-a { font-size: 0.88rem; color: var(--ink-mid); line-height: 1.8; font-weight: 400; padding: 0 2rem 1.5rem; display: none; }
+    .faq-a { font-size: 0.86rem; color: var(--ink-mid); line-height: 1.8; padding: 0 1.75rem 1.35rem; display: none; }
     .faq-item.open .faq-a { display: block; }
-    .cta-section { text-align: center; padding: 8rem 8vw; background: var(--ink) !important; position: relative; overflow: hidden; }
-    .cta-section::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 500px; height: 500px; background: radial-gradient(circle, rgba(108,92,231,0.15) 0%, transparent 70%); pointer-events: none; }
-    .cta-section .section-label { color: var(--lavender-light); justify-content: center; }
-    .cta-section .section-label::before { background: var(--lavender-light); }
-    .cta-section .section-title { color: #ffffff; max-width: 600px; margin: 0 auto 1.5rem; }
-    .cta-section .section-intro { color: #9896b8; margin: 0 auto 2.5rem; }
-    .cta-email { display: inline-block; font-family: var(--serif); font-size: 1.5rem; font-weight: 600; color: var(--lavender-light); text-decoration: none; border-bottom: 1px solid var(--lavender); padding-bottom: 0.25rem; transition: color 0.2s, border-color 0.2s; }
+    .cta-wrap { text-align: center; position: relative; overflow: hidden; }
+    .cta-wrap::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(139,124,248,0.15) 0%, transparent 65%); pointer-events: none; }
+    .cta-wrap .label { justify-content: center; color: var(--lav-light); }
+    .cta-wrap .label::before { background: var(--lav-light); }
+    .cta-wrap h2 { color: #ffffff; max-width: 600px; margin: 0 auto 1.25rem; }
+    .cta-wrap .intro { color: rgba(255,255,255,0.5); margin: 0 auto 2rem; }
+    .cta-email { display: inline-block; font-family: var(--serif); font-size: 1.5rem; font-weight: 700; color: var(--lav-light); text-decoration: none; border-bottom: 1px solid var(--lav); padding-bottom: 0.2rem; transition: color 0.2s, border-color 0.2s; }
     .cta-email:hover { color: #ffffff; border-color: #ffffff; }
-    .cta-note { font-size: 0.78rem; color: #5a5778; margin-top: 1.5rem; }
-    footer { border-top: 1px solid var(--rule); padding: 1.75rem 8vw; display: flex; justify-content: space-between; align-items: center; font-size: 0.76rem; color: var(--ink-light); }
-    footer a { color: var(--ink-light); text-decoration: none; }
-    footer a:hover { color: var(--lavender); }
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .cta-note { font-size: 0.76rem; color: rgba(255,255,255,0.3); margin-top: 1.25rem; }
+    footer { background: var(--ink); border-top: 1px solid rgba(139,124,248,0.15); padding: 1.5rem 8vw; display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem; color: rgba(255,255,255,0.3); }
+    footer a { color: rgba(255,255,255,0.3); text-decoration: none; }
+    footer a:hover { color: var(--lav-light); }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.visible { opacity: 1; transform: none; }
-    @media (max-width: 860px) {
+    @media (max-width: 800px) {
       .hero { grid-template-columns: 1fr; min-height: auto; }
-      .hero-left { padding: 4rem 6vw 3rem; border-right: none; border-bottom: 1px solid var(--rule); }
+      .hero-left { padding: 4rem 6vw 3rem; border-right: none; border-bottom: 1px solid rgba(139,124,248,0.2); }
       .hero-right { padding: 3rem 6vw; }
-      .services-grid { grid-template-columns: 1fr; }
-      .service-card { border-right: none; }
-      .service-card:nth-child(3), .service-card:nth-child(4) { border-bottom: 1px solid var(--rule); }
-      .service-card:last-child { border-bottom: none; }
+      .services { grid-template-columns: 1fr; }
+      .svc { border-right: none; }
+      .svc:nth-child(3), .svc:nth-child(4) { border-bottom: 1px solid var(--rule); }
+      .svc:last-child { border-bottom: none; }
       .approach-grid { grid-template-columns: 1fr; }
-      .testimonials-grid { grid-template-columns: 1fr; }
-      section { padding: 4rem 6vw; }
+      .t-grid { grid-template-columns: 1fr; }
+      section { padding: 3.5rem 6vw; }
       .nav-links { display: none; }
       .work-item { grid-template-columns: 1fr; }
-      .work-arrow { display: none; }
+      .arr { display: none; }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="#" class="nav-brand">Copies by Hadassah</a>
-    <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#approach">Process</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
 
-  <div class="hero">
-    <div class="hero-left">
-      <p class="eyebrow">B2B Content Writer · SaaS · Fintech · Martech</p>
-      <h1 class="hero-headline">Writing that earns attention <em>and</em> moves buyers.</h1>
-      <p class="hero-body">I write long-form SEO content and ghostwrite LinkedIn posts for B2B brands in SaaS, fintech, and martech. The work is research-backed, editorially sharp, and built around how buyers actually think — not what looks good on an editorial calendar.</p>
-      <a href="#contact" class="hero-cta">Work with me</a>
+<nav>
+  <a href="#" class="nav-brand">Copies by Hadassah</a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#approach">Process</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hero-left">
+    <p class="eyebrow">B2B Content Writer &middot; SaaS &middot; Fintech &middot; Martech</p>
+    <h1>Your content is live.<br/><em>Your pipeline</em><br/>is not moving.</h1>
+    <p class="hero-body">That gap between content that ranks and content that converts is exactly where I work. I write long-form SEO articles, LinkedIn content, and newsletters for B2B brands in SaaS, fintech, and martech. <strong>Research-backed. Built around how buyers actually decide.</strong></p>
+    <a href="#contact" class="btn">Let's talk &#8594;</a>
+  </div>
+  <div class="hero-right">
+    <img src="https://i.ibb.co/nvW4ws4/CBA64-EC2-96-C3-4-B41-B050-B7-CCFAA6-B0-BA.png" alt="Esther Afolabi" class="hero-photo" />
+    <div class="hero-bio">
+      <p>I'm <strong>Esther</strong> &#8212; a B2B content writer and contributing writer at h1copy and Smarketers Hub.</p>
+      <p>If you're a founder, you already know what you want to say. You just don't have time to say it well. If you run content at a SaaS company, you have traffic. What you need is content that actually moves deals forward.</p>
+      <p>That's what I build. Pieces grounded in how buyers think, not what's easy to plan. I also share writing insights on <strong>The Content Posse</strong> &#8212; <em>my Instagram page for content writers.</em></p>
     </div>
-    <div class="hero-right">
-      <!-- PHOTO: Replace src with your hosted image URL -->
-      <img src="<a href="https://ibb.co/sGBcgvc"><img src="https://i.ibb.co/nvW4ws4/CBA64-EC2-96-C3-4-B41-B050-B7-CCFAA6-B0-BA.png" alt="Esther Afolabi" class="hero-photo" />
-      <div class="hero-bio">
-        <p>I'm <strong>Esther</strong> — a B2B content writer and contributing writer at h1copy and Smarketers Hub, with a habit of reading briefs more carefully than most writers read their own drafts.</p>
-        <br/>
-        <p>I write long-form articles, newsletter content, and LinkedIn posts for SaaS, fintech, and martech brands. I also share writing insights and observations on <strong>The Content Posse</strong>, my Instagram page for content writers.</p>
-        <br/>
-        <p>What I actually care about: writing that reflects real thinking. Content that makes a reader pause and think, <em>yes — that's exactly the problem I have.</em></p>
-      </div>
-      <div class="creds-row">
-        <span class="cred-pill">Contributing Writer — h1copy</span>
-        <span class="cred-pill">Contributing Writer — Smarketers Hub</span>
-        <span class="cred-pill">HubSpot Content Marketing Certified</span>
-        <span class="cred-pill">Ahrefs SEO Certified</span>
-        <span class="cred-pill">Freelance Coalition for Developing Countries — Volunteer</span>
-      </div>
+    <div class="creds">
+      <span class="cred">Contributing Writer &#8212; h1copy</span>
+      <span class="cred">Contributing Writer &#8212; Smarketers Hub</span>
+      <span class="cred">HubSpot Content Marketing Certified</span>
+      <span class="cred">Ahrefs SEO Certified</span>
+      <span class="cred">Freelance Coalition for Developing Countries &#8212; Volunteer</span>
     </div>
   </div>
+</div>
 
-  <section id="services">
-    <p class="section-label">What I do</p>
-    <h2 class="section-title">Four things. Done well.</h2>
-    <p class="section-intro">I don't cover every content format. I focus on the ones where specificity and depth change what the content can do for a business.</p>
-    <div class="services-grid reveal">
-      <div class="service-card">
-        <span class="service-num">01</span>
-        <h3 class="service-name">Long-Form SEO Content</h3>
-        <p class="service-desc">In-depth articles and blog posts for B2B brands in SaaS, fintech, and martech. Researched to the point where I have something to say, structured to rank, and written to actually be read. I work from briefs, interview SMEs when the piece demands it, and integrate data with judgment — not decoration.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-num">02</span>
-        <h3 class="service-name">LinkedIn Ghostwriting</h3>
-        <p class="service-desc">Content for founders and B2B professionals who know what they think but don't always have time to write it. I write from real observations — not motivational filler. Posts that build the kind of credibility that makes prospects want to reply before they've even seen a pitch.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-num">03</span>
-        <h3 class="service-name">Newsletter Writing</h3>
-        <p class="service-desc">Email newsletters for B2B brands that want to stay in front of their audience without sending another roundup nobody opens. I write newsletters that give readers something worth opening — a perspective, a finding, a well-argued take — and a reason to keep subscribing.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-num">04</span>
-        <h3 class="service-name">Content Strategy + SEO</h3>
-        <p class="service-desc">Keyword research, content audits, and editorial planning for teams that want their content to do more than exist. I look at what's ranking, what buyers are actually asking at each stage of a deal, and what your content calendar is still missing. Then I map a plan that connects all three.</p>
-      </div>
+<section id="services">
+  <p class="label">What I do</p>
+  <h2>Four ways I help B2B brands close the gap.</h2>
+  <p class="intro">Traffic without pipeline is just a vanity metric. Every service I offer is built around content that moves buyers, not just impresses them.</p>
+  <div class="services reveal">
+    <div class="svc">
+      <span class="svc-num">01</span>
+      <h3 class="svc-name">Long-Form SEO Content</h3>
+      <p class="svc-desc">In-depth articles and blog posts that rank because they deserve to. I research until I have something real to say, interview SMEs when the piece demands it, and write for the buyer reading at 11pm trying to figure out if your solution is worth a demo request.</p>
+      <div class="svc-metric"><span class="svc-metric-num">80%</span><span class="svc-metric-label">of published articles ranking on Google</span></div>
     </div>
-  </section>
+    <div class="svc">
+      <span class="svc-num">02</span>
+      <h3 class="svc-name">LinkedIn Ghostwriting</h3>
+      <p class="svc-desc">For founders and B2B professionals who know what they think but can't find the time to write it. I turn your real observations into posts that build credibility quietly &#8212; the kind that makes prospects message you before you've even pitched them.</p>
+      <div class="svc-metric"><span class="svc-metric-num">70%</span><span class="svc-metric-label">avg. engagement rate posting 3x weekly</span></div>
+    </div>
+    <div class="svc">
+      <span class="svc-num">03</span>
+      <h3 class="svc-name">Newsletter Writing</h3>
+      <p class="svc-desc">Not another roundup nobody opens. I write newsletters that give your audience something worth reading &#8212; a sharp take, a useful finding, a perspective they haven't seen &#8212; and a reason to stay subscribed.</p>
+      <div class="svc-metric"><span class="svc-metric-num">70%</span><span class="svc-metric-label">avg. open rate across multiple clients</span></div>
+    </div>
+    <div class="svc">
+      <span class="svc-num">04</span>
+      <h3 class="svc-name">Content Strategy + SEO</h3>
+      <p class="svc-desc">For teams whose content calendar is full but whose pipeline isn't. I look at what's ranking, what buyers are actually asking when they're close to a decision, and what your content is still missing. Then I build the plan that fills the gap.</p>
+      <div class="svc-metric"><span class="svc-metric-num">100%</span><span class="svc-metric-label">client retention rate</span></div>
+    </div>
+  </div>
+</section>
 
-  <section id="work" class="work-section">
-    <p class="section-label">Selected work</p>
-    <h2 class="section-title">Some of what I've written.</h2>
-    <p class="section-intro">Each piece is labeled with what it was trying to do and what it shows about how I work. The ranking ones you can verify yourself.</p>
-    <div class="work-grid reveal">
-      <a href="https://h1copy.com/blog/what-the-sales-perspective-does-to-b2b-content-and-why-most-teams-never-find-out/" target="_blank" class="work-item">
-        <div>
-          <div class="work-meta">
-            <span class="work-pub">h1copy — Guest Post</span>
-            <span class="work-badge">Recently Published</span>
-          </div>
-          <h3 class="work-title">What the Sales Perspective Does to B2B Content (And Why Most Teams Never Find Out)</h3>
-          <p class="work-desc">A long-form argument for why content built without sales intelligence tends to drive traffic but miss pipeline. Involved an SME interview with a B2B content marketer, data from Gong Labs, HubSpot, and Redpoint's 2025 buyer research — integrated to make a point, not to pad a word count. This one shows how I build an editorial argument over 3,000+ words without losing the thread.</p>
+<section id="work" class="alt">
+  <p class="label">Selected work</p>
+  <h2>Proof over promises.</h2>
+  <p class="intro">Each piece below shows a different dimension of how I work. The ranking ones you can verify yourself.</p>
+  <div class="work-list reveal">
+    <a href="https://h1copy.com/blog/what-the-sales-perspective-does-to-b2b-content-and-why-most-teams-never-find-out/" target="_blank" class="work-item">
+      <div>
+        <div class="work-meta">
+          <span class="pub">h1copy &#8212; Guest Post</span>
+          <span class="badge">Recently Published</span>
         </div>
-        <span class="work-arrow">↗</span>
-      </a>
-      <a href="https://www.smarketershub.com/blog/b2b-saas-writing-creative-techniques" target="_blank" class="work-item">
-        <div>
-          <div class="work-meta">
-            <span class="work-pub">Smarketers Hub — Guest Post</span>
-            <span class="work-badge ranking">Ranking on Google</span>
-          </div>
-          <h3 class="work-title">How My Creative Writing Brain Makes Me a Better SaaS Content Marketer</h3>
-          <p class="work-desc">A first-person piece making the case that creative writing instincts — empathy, metaphor, structure, specificity — are assets in B2B SaaS content, not liabilities. Uses real examples from Animalz, Fenwick, and my own work to illustrate the argument. This one shows how I write with a voice without losing sight of the reader's actual problem.</p>
+        <h3 class="work-title">What the Sales Perspective Does to B2B Content (And Why Most Teams Never Find Out)</h3>
+        <p class="work-desc">A long-form argument for why content built without sales intelligence tends to drive traffic but miss pipeline. Involved an SME interview, data from Gong Labs, HubSpot, and Redpoint's 2025 buyer research &#8212; integrated to make a point, not pad a word count. Shows how I build an editorial argument over 3,000+ words without losing the thread.</p>
+      </div>
+      <span class="arr">&#8599;</span>
+    </a>
+    <a href="https://www.smarketershub.com/blog/b2b-saas-writing-creative-techniques" target="_blank" class="work-item">
+      <div>
+        <div class="work-meta">
+          <span class="pub">Smarketers Hub &#8212; Guest Post</span>
+          <span class="badge green">Ranking on Google</span>
         </div>
-        <span class="work-arrow">↗</span>
-      </a>
-      <a href="https://medium.com/@estherfunmi/why-most-crms-dont-work-a-practical-saas-crm-implementation-strategy-for-small-teams-ac7e6d98d7f5" target="_blank" class="work-item">
-        <div>
-          <div class="work-meta">
-            <span class="work-pub">B2B SaaS</span>
-            <span class="work-badge ranking">Ranking on Google</span>
-          </div>
-          <h3 class="work-title">Why Most CRMs Don't Work: A Practical SaaS CRM Implementation Strategy for Small Teams</h3>
-          <p class="work-desc">A research-heavy piece with a clear editorial position: it's not the software that fails, it's the workflow. Built around data from Insightly's 2025 CRM Report, HubSpot, and Salesmate — with a four-step implementation framework that earns its place because the argument up front makes you need it. This one shows how I handle data-dense topics without turning them into a listicle.</p>
+        <h3 class="work-title">How My Creative Writing Brain Makes Me a Better SaaS Content Marketer</h3>
+        <p class="work-desc">A first-person piece making the case that creative writing instincts &#8212; empathy, metaphor, structure, specificity &#8212; are assets in B2B SaaS content, not liabilities. Uses real examples from Animalz and Fenwick. Shows how I write with a voice without losing sight of the reader's actual problem.</p>
+      </div>
+      <span class="arr">&#8599;</span>
+    </a>
+    <a href="https://medium.com/@estherfunmi/why-most-crms-dont-work-a-practical-saas-crm-implementation-strategy-for-small-teams-ac7e6d98d7f5" target="_blank" class="work-item">
+      <div>
+        <div class="work-meta">
+          <span class="pub">B2B SaaS</span>
+          <span class="badge green">Ranking on Google</span>
         </div>
-        <span class="work-arrow">↗</span>
-      </a>
-      <a href="https://medium.com/@estherfunmi/the-ultimate-guide-to-project-timeline-planning-6-steps-to-set-achievable-deadlines-bf51df5307c5" target="_blank" class="work-item">
-        <div>
-          <div class="work-meta">
-            <span class="work-pub">Project Management</span>
-            <span class="work-badge ranking">Ranking on Google</span>
-          </div>
-          <h3 class="work-title">The Ultimate Guide to Project Timeline Planning: 6 Steps to Set Achievable Deadlines</h3>
-          <p class="work-desc">A six-step project management guide that opens with a wedding planning analogy to ground an abstract process in something immediately familiar. Covers scope definition, task prioritization, scheduling, risk assessment, and timeline review — each step anchored to a concrete scenario and supported by tool recommendations. This one shows range: practical, instructional writing that still has a point of view.</p>
+        <h3 class="work-title">Why Most CRMs Don't Work: A Practical SaaS CRM Implementation Strategy for Small Teams</h3>
+        <p class="work-desc">A research-heavy piece with a clear editorial position: it's not the software that fails, it's the workflow. Built around data from Insightly's 2025 CRM Report, HubSpot, and Salesmate. Shows how I handle data-dense topics without turning them into a listicle.</p>
+      </div>
+      <span class="arr">&#8599;</span>
+    </a>
+    <a href="https://medium.com/@estherfunmi/the-ultimate-guide-to-project-timeline-planning-6-steps-to-set-achievable-deadlines-bf51df5307c5" target="_blank" class="work-item">
+      <div>
+        <div class="work-meta">
+          <span class="pub">Project Management</span>
+          <span class="badge green">Ranking on Google</span>
         </div>
-        <span class="work-arrow">↗</span>
-      </a>
+        <h3 class="work-title">The Ultimate Guide to Project Timeline Planning: 6 Steps to Set Achievable Deadlines</h3>
+        <p class="work-desc">A six-step guide that opens with a wedding planning analogy to ground an abstract process in something immediately familiar. Covers scope definition, task prioritization, scheduling, risk assessment, and timeline review &#8212; each step anchored to a concrete scenario. Shows range: practical, instructional writing that still has a point of view.</p>
+      </div>
+      <span class="arr">&#8599;</span>
+    </a>
+  </div>
+</section>
+
+<section id="approach" class="dark">
+  <p class="label">How I work</p>
+  <h2>The thinking behind every piece.</h2>
+  <p class="intro">Good content is a discipline, not an inspiration. The topic changes. The process does not.</p>
+  <div class="approach-grid reveal">
+    <div class="step">
+      <span class="step-num">Step 01</span>
+      <h3 class="step-title">I start with the reader, not the brief</h3>
+      <p class="step-desc">The brief tells me the topic. The reader tells me the angle. Before I write a word, I want to know what they already believe and what would actually shift their thinking. That's where the piece begins &#8212; not at the keyword.</p>
     </div>
-  </section>
-
-  <section id="approach" class="approach-section">
-    <p class="section-label">How I work</p>
-    <h2 class="section-title">The process behind the writing.</h2>
-    <p class="section-intro">Good content is a discipline, not an inspiration. Every piece I write follows the same thinking — the topic changes, the approach doesn't.</p>
-    <div class="approach-grid reveal">
-      <div class="approach-step">
-        <span class="step-label">Step 01</span>
-        <h3 class="step-title">I start with the reader, not the brief</h3>
-        <p class="step-desc">The brief tells me the topic. The reader tells me the angle. Before I write a word, I want to know who is reading this, what they already believe, and what would actually shift their thinking. That's where the piece begins — not at the keyword.</p>
-      </div>
-      <div class="approach-step">
-        <span class="step-label">Step 02</span>
-        <h3 class="step-title">I research until I have something to say</h3>
-        <p class="step-desc">That means primary sources, competitor analysis, and SME interviews where the project allows. I don't start writing until I have a genuine point of view. Thin research produces thin content — and B2B readers, especially buyers close to a decision, can tell the difference immediately.</p>
-      </div>
-      <div class="approach-step">
-        <span class="step-label">Step 03</span>
-        <h3 class="step-title">I write for clarity, then edit for precision</h3>
-        <p class="step-desc">My first draft gets the argument down. My edits cut everything that doesn't earn its place. I'm particularly hard on sentences that sound good but say nothing — because those are the ones that quietly erode trust in a brand's voice over time, one article at a time.</p>
-      </div>
-      <div class="approach-step">
-        <span class="step-label">Step 04</span>
-        <h3 class="step-title">I optimize for search without writing for algorithms</h3>
-        <p class="step-desc">I understand keyword intent, on-page SEO, and internal linking. I use them as a framework, not a formula. The goal is content that ranks because it deserves to — not content that ranks for three months until Google realizes readers keep bouncing off it.</p>
-      </div>
+    <div class="step">
+      <span class="step-num">Step 02</span>
+      <h3 class="step-title">I research until I have something real to say</h3>
+      <p class="step-desc">Primary sources, competitor analysis, SME interviews where the project allows. I don't start writing until I have a genuine point of view. Thin research produces thin content &#8212; and B2B buyers close to a decision can tell the difference immediately.</p>
     </div>
-  </section>
-
-  <section id="testimonials">
-    <p class="section-label">What people say</p>
-    <h2 class="section-title">From the people who've worked with me.</h2>
-    <p class="section-intro">Real words from real projects.</p>
-    <div class="testimonials-grid reveal">
-      <div class="testimonial-card">
-        <span class="t-mark">"</span>
-        <p class="t-text">I wholeheartedly recommend Esther for her exceptional writing skills and professionalism. I have had the privilege of working with her on numerous projects, and her dedication to delivering high-quality content is truly remarkable. She is not only a highly talented writer but an individual who readily accepts feedback and corrections, making her an absolute pleasure to collaborate with. Her commitment to delivering top-notch work, along with her meticulous research skills, ensures that every project she undertakes is of the highest standard.</p>
-        <div class="t-rule"></div>
-        <p class="t-name">Grace Ajagbe</p>
-        <p class="t-role">AI Solutions Architect & Consultant — Client</p>
-      </div>
-      <div class="testimonial-card">
-        <span class="t-mark">"</span>
-        <p class="t-text">Thank you for being on top of comms and always sending out the messages. You did such a good job that multiple people were asking me who you were.</p>
-        <div class="t-rule"></div>
-        <p class="t-name">Community Lead</p>
-        <p class="t-role">Via Slack — on communications work</p>
-      </div>
-      <div class="testimonial-card">
-        <span class="t-mark">"</span>
-        <p class="t-text">Working with Esther made the project significantly easier to manage. She put her all into every task, her copywriting instincts were strong from day one, and she never once missed a deadline. Consistent, reliable, and genuinely committed to the outcome.</p>
-        <div class="t-rule"></div>
-        <p class="t-name">Emem Udom</p>
-        <p class="t-role">Founder, Eleven Labs — on project collaboration</p>
-      </div>
+    <div class="step">
+      <span class="step-num">Step 03</span>
+      <h3 class="step-title">I write for clarity, then edit for precision</h3>
+      <p class="step-desc">My first draft gets the argument down. My edits cut everything that doesn't earn its place. I'm particularly hard on sentences that sound good but say nothing &#8212; those are the ones that quietly erode trust in a brand's voice over time.</p>
     </div>
-  </section>
-
-  <section class="faq-section">
-    <p class="section-label">FAQ</p>
-    <h2 class="section-title">Questions prospects usually ask.</h2>
-    <p class="section-intro">Answers upfront so you don't have to.</p>
-    <div class="faq-list reveal">
-      <div class="faq-item">
-        <button class="faq-q">What's your typical turnaround time? <span class="faq-icon">+</span></button>
-        <div class="faq-a">For long-form articles (1,500–3,000 words), I typically deliver within 5–7 days of receiving a complete brief. For LinkedIn content, 2–3 days. If you have tighter deadlines, tell me upfront — I'd rather know early than rush at the end.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">What industries do you write for? <span class="faq-icon">+</span></button>
-        <div class="faq-a">My primary focus is SaaS, fintech, and martech — B2B brands where the buyer is sophisticated and the content needs to reflect that. I've written on CRM implementation, content strategy, project management, and sales-marketing alignment. If your industry is adjacent, let's talk — the research process is the same regardless of the niche.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Do you work from briefs or develop your own angles? <span class="faq-icon">+</span></button>
-        <div class="faq-a">Both, depending on what you need. I can execute a detailed brief precisely, or I can propose angles if you give me the topic and the audience. For the latter, I'll usually share the angle and outline before writing — that way we're aligned before anything gets drafted.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">How do you handle revisions? <span class="faq-icon">+</span></button>
-        <div class="faq-a">I include one round of revisions in every project. I take feedback seriously and I don't push back on editorial direction — if something isn't working for you, it needs to change. That said, I do flag it if a revision request contradicts something in the brief, so we can sort it out before it affects the final piece.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Do you ghostwrite — will my name be on the content? <span class="faq-icon">+</span></button>
-        <div class="faq-a">Yes. For LinkedIn ghostwriting especially, that's the whole point. I write in your voice, under your name, and I don't disclose clients. The goal is content that sounds exactly like you — just more consistent and more frequent than you'd manage writing it yourself.</div>
-      </div>
+    <div class="step">
+      <span class="step-num">Step 04</span>
+      <h3 class="step-title">I optimize for search without writing for algorithms</h3>
+      <p class="step-desc">Keyword intent, on-page SEO, internal linking &#8212; I use them as a framework, not a formula. The goal is content that ranks because it deserves to. Not content that ranks for three months before readers bounce off it.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="cta-section" id="contact">
-    <p class="section-label">Let's work together</p>
-    <h2 class="section-title">If you need a writer who thinks before she types — I'm available.</h2>
-    <p class="section-intro">Tell me what you're working on: the format, the audience, the deadline. I'll tell you honestly whether I'm the right fit.</p>
-    <a href="mailto:copiesbyhadassah@gmail.com" class="cta-email">copiesbyhadassah@gmail.com</a>
-    <p class="cta-note">I typically respond within 24 hours.</p>
-  </section>
+<section id="testimonials">
+  <p class="label">What people say</p>
+  <h2>From the people who've worked with me.</h2>
+  <p class="intro">Real words from real projects.</p>
+  <div class="t-grid reveal">
+    <div class="t-card">
+      <span class="t-mark">&#8220;</span>
+      <p class="t-text">I wholeheartedly recommend Esther for her exceptional writing skills and professionalism. Her dedication to delivering high-quality content is truly remarkable. She readily accepts feedback and corrections, making her an absolute pleasure to collaborate with. Her meticulous research skills ensure that every project she undertakes is of the highest standard.</p>
+      <div class="t-rule"></div>
+      <p class="t-name">Grace Ajagbe</p>
+      <p class="t-role">AI Solutions Architect &amp; Consultant &#8212; Client</p>
+    </div>
+    <div class="t-card">
+      <span class="t-mark">&#8220;</span>
+      <p class="t-text">Thank you for being on top of comms and always sending out the messages. You did such a good job that multiple people were asking me who you were.</p>
+      <div class="t-rule"></div>
+      <p class="t-name">Community Lead</p>
+      <p class="t-role">Via Slack &#8212; on communications work</p>
+    </div>
+    <div class="t-card">
+      <span class="t-mark">&#8220;</span>
+      <p class="t-text">Working with Esther made the project significantly easier to manage. She put her all into every task, her copywriting instincts were strong from day one, and she never once missed a deadline. Consistent, reliable, and genuinely committed to the outcome.</p>
+      <div class="t-rule"></div>
+      <p class="t-name">Emem Udom</p>
+      <p class="t-role">Founder, Eleven Labs &#8212; on project collaboration</p>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    <span>© 2025 Copies by Hadassah</span>
-    <span>Esther Afolabi · B2B Content Writer · <a href="https://www.linkedin.com/in/afolabi-esther/" target="_blank">LinkedIn</a> · <a href="mailto:copiesbyhadassah@gmail.com">copiesbyhadassah@gmail.com</a></span>
-  </footer>
+<section class="alt">
+  <p class="label">FAQ</p>
+  <h2>Questions prospects usually ask.</h2>
+  <p class="intro">Answers upfront so you don't have to.</p>
+  <div class="faq-list reveal">
+    <div class="faq-item">
+      <button class="faq-q">What's your typical turnaround time? <span class="faq-icon">+</span></button>
+      <div class="faq-a">For long-form articles (1,500&#8211;3,000 words), I typically deliver within 5&#8211;7 days of receiving a complete brief. For LinkedIn content, 2&#8211;3 days. If you have tighter deadlines, tell me upfront &#8212; I'd rather know early than rush at the end.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">What industries do you write for? <span class="faq-icon">+</span></button>
+      <div class="faq-a">My primary focus is SaaS, fintech, and martech &#8212; B2B brands where the buyer is sophisticated and the content needs to reflect that. I've written on CRM implementation, content strategy, project management, and sales-marketing alignment. If your industry is adjacent, let's talk.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Do you work from briefs or develop your own angles? <span class="faq-icon">+</span></button>
+      <div class="faq-a">Both. I can execute a detailed brief precisely, or I can propose angles if you give me the topic and audience. For the latter, I'll share the angle and outline before writing &#8212; that way we're aligned before anything gets drafted.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">How do you handle revisions? <span class="faq-icon">+</span></button>
+      <div class="faq-a">I include one round of revisions in every project. I take feedback seriously and don't push back on editorial direction. That said, I do flag it if a revision request contradicts something in the brief, so we can sort it out before it affects the final piece.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Do you ghostwrite &#8212; will my name be on the content? <span class="faq-icon">+</span></button>
+      <div class="faq-a">Yes. For LinkedIn ghostwriting especially, that's the whole point. I write in your voice, under your name, and I don't disclose clients. The goal is content that sounds exactly like you &#8212; just more consistent and more frequent than you'd manage writing it yourself.</div>
+    </div>
+  </div>
+</section>
 
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.08 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    document.querySelectorAll('.faq-q').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item = btn.closest('.faq-item');
-        const isOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-        if (!isOpen) item.classList.add('open');
-      });
+<section id="contact" class="dark cta-wrap">
+  <p class="label">Let's work together</p>
+  <h2>Ready to close the gap between traffic and pipeline?</h2>
+  <p class="intro">Tell me what you're working on &#8212; the format, the audience, the deadline. I'll tell you honestly whether I'm the right fit.</p>
+  <a href="mailto:copiesbyhadassah@gmail.com" class="cta-email">copiesbyhadassah@gmail.com</a>
+  <p class="cta-note">I typically respond within 24 hours.</p>
+</section>
+
+<footer>
+  <span>&#169; 2026 Copies by Hadassah</span>
+  <span>Esther Afolabi &#183; B2B Content Writer &#183; <a href="https://www.linkedin.com/in/afolabi-esther/" target="_blank">LinkedIn</a> &#183; <a href="mailto:copiesbyhadassah@gmail.com">copiesbyhadassah@gmail.com</a></span>
+</footer>
+
+<script>
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(function(el) { obs.observe(el); });
+  document.querySelectorAll('.faq-q').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = btn.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+      if (!isOpen) { item.classList.add('open'); }
     });
-  </script>
+  });
+</script>
 </body>
 </html>
